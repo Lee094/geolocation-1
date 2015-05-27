@@ -27,6 +27,8 @@
 		}
 	}
 	//14.542155, 121.216129 position.coords.latitude
+	
+	//show position
 	function showPosition (position) 
 	{
 		lat = position.coords.latitude;
@@ -37,14 +39,15 @@
 		mapholder.style.height = '400px';
 		mapholder.style.width = '250px';
 
-		var myOptions = 
-		{
+		// map options
+		var myOptions = {
 			center:path[0],
 			zoom:14,
 			mapTypeId:google.maps.MapTypeId.ROADMAP,
 			mapTypeControl:false,
 			navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
 		}
+
 		var map = new google.maps.Map(document.getElementById("mapholder"),myOptions);
 		/*var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});*/
 		var markerIcon = {url: "markerIcon.png", anchor: new google.maps.Point(13,12)}
